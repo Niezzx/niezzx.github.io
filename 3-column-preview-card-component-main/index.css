@@ -1,0 +1,120 @@
+/* --------------------- */
+/* Reset --------------- */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* --------------------- */
+/* Basic setting ------- */
+
+body {
+	font-size: 15px;
+	font-family: "Lexend Deca", "Big Shoulders Display";
+	min-height: 100vh;
+	background-color: hsl(0, 0%, 95%);
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+h2,
+button {
+	color: hsl(0, 0%, 95%);
+}
+
+p {
+	color: hsla(0, 0%, 100%, 95%);
+}
+
+/* ---------------------- */
+/* ---------------------- */
+
+.container {
+	max-width: 60vw;
+	margin: 0 auto;
+}
+
+.wrapper {
+	min-width: 60vw;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	border-radius: 1rem;
+	border: 0.5px red solid;
+	overflow: hidden;
+}
+
+section {
+	padding: 4rem;
+}
+
+.label-1 {
+	background-color: hsl(31, 77%, 52%);
+}
+
+.label-2 {
+	background-color: hsl(184, 100%, 22%);
+}
+
+.label-3 {
+	background-color: hsl(179, 100%, 13%);
+}
+
+h2 {
+	font-weight: 700;
+	padding: 3rem 0;
+	font-size: 3rem;
+}
+
+p {
+	max-height: 20rem;
+	font-size: 1.3rem;
+	color: hsla(0, 0%, 100%, 0.75);
+	line-height: 1.8;
+}
+
+button {
+	margin: 6rem 0 2rem 0;
+	font-size: 1.5rem;
+	padding: 1rem 2rem;
+	border-radius: 3rem;
+	border: 0;
+}
+
+.label-1 > button {
+	color: hsl(31, 77%, 52%);
+}
+
+.label-2 > button {
+	color: hsl(184, 100%, 22%);
+}
+
+.label-3 > button {
+	color: hsl(179, 100%, 13%);
+}
+
+.attribution {
+	align-self: center;
+	text-align: center;
+}
+
+/* ------------------------- */
+/* Mobile Design ----------- */
+
+@media screen and (max-width: 690px) {
+	body {
+		text-align: left;
+	}
+
+	.container {
+		max-width: 90vw;
+	}
+
+	.wrapper {
+		grid-template-columns: 1fr;
+	}
+}
