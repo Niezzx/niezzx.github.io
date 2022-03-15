@@ -1,0 +1,179 @@
+/* 
+- Mobile: 375px
+- Desktop: 1440px
+
+### Gradients
+
+- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+
+### Body Copy
+
+- Font size: 16px
+
+### Font
+
+- Family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)
+- Weights: 300, 400, 600
+
+*/
+/* @import url(https://fonts.google.com/specimen/Josefin+Sans); */
+
+:root {
+	/* Primary */
+	--Desaturated-Red: hsl(0, 55%, 76%);
+	--Soft-Red: hsl(0, 93%, 68%);
+	--Dark-Grayish-Red: hsl(0, 6%, 24%);
+
+	/* Neutral */
+	--Dark-Grayish-Red: hsl(0, 6%, 24%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	font-family: "Josefin Sans";
+	font-size: 16px;
+	font-weight: 400;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	max-width: 70vw;
+}
+
+.layout {
+	display: grid;
+	grid-template-columns: 3fr 2fr;
+}
+
+main {
+	background-image: url(./images/bg-pattern-desktop.svg);
+	display: flex;
+	flex-direction: column;
+}
+
+.sidebar img {
+	background-size: cover;
+}
+
+header {
+	padding: 2rem 4rem;
+}
+
+.circle {
+	margin-left: 6rem;
+	margin-bottom: 0.3rem;
+	width: 2.4rem;
+	height: 2.4rem;
+	border: hsla(0, 69%, 66%, 0.897) solid 0.2rem;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.word {
+	display: inline-block;
+	margin-left: 1rem;
+}
+
+.word span {
+	display: block;
+	font-size: 1.2rem;
+	font-weight: 700;
+	line-height: 2rem;
+}
+
+section {
+	margin: 3rem 8rem 5rem 10rem;
+}
+
+.titles {
+	text-transform: uppercase;
+	font-size: 4rem;
+	letter-spacing: 1rem;
+	font-weight: 300;
+	color: var(--Desaturated-Red);
+}
+
+.titles span {
+	display: block;
+	color: rgba(0, 0, 0, 0.801);
+	font-weight: 600;
+}
+
+.paragraphs {
+	color: var(--Desaturated-Red);
+	line-height: 1.5rem;
+	padding: 3rem 0 0 0;
+}
+
+.email {
+	margin: 0 0 0.5rem 10rem;
+	display: flex;
+	justify-content: baseline;
+}
+
+#email {
+	width: 26rem;
+	height: 3rem;
+	padding-left: 2rem;
+	border-radius: 2rem;
+	border-color: hsla(0, 3%, 22%, 0.363);
+}
+
+#email::placeholder {
+	font-size: 0.9rem;
+	color: var(--Desaturated-Red);
+}
+
+button {
+	height: 3rem;
+	width: 6rem;
+	background: url(./images/icon-arrow.svg) var(--Desaturated-Red) no-repeat center;
+	border-radius: 2rem;
+	border: 1px;
+	position: relative;
+	left: -6rem;
+}
+
+button:hover {
+	box-shadow: -5px 5px 1.5rem rgba(224, 81, 81, 0.842);
+}
+
+button:active {
+	animation: button_active 1s linear;
+}
+
+@keyframes button_active {
+	0% {
+		transform: scale(0.7);
+	}
+	50% {
+		transform: scale(1.5);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+button img {
+	position: relative;
+	left: -4rem;
+}
+
+.errorMessage {
+	color: var(--Desaturated-Red);
+	margin: 1rem 0 4rem 11rem;
+}
+
+.active {
+	display: none;
+}

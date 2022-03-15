@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./index.css">
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="layout">
+      <main>
+        <header>
+          <div class="circle"></div>
+          <div class="word">
+            <span>BASE</span>
+            <span>APPAREL</span>
+          </div>
+        </header>
+        <section>
+          <div class="titles">
+            We're <span>coming soon</span>
+          </div>
+          <div class="paragraphs">
+            Hello fellow shoppers! We're currently building our new fashion store.
+            Add your email below to stay up-to-date with announcements and our launch deals.
+          </div>
+        </section>
+        <form class="email" for="email">
+          <input type="email" name="email" id="email" placeholder="Email Address">
+          <button class="btn" name="email" type="submit">
+            <img class="error active" src="./images/icon-error.svg" alt="">
+          </button>
+        </form>
+        <p class="errorMessage active">Please provide a valid email</p>
+      </main>
+
+      <div class="sidebar">
+        <img src="./images/hero-desktop.jpg" alt="hero">
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Max Chow</a>.
+    </p>
+  </footer>
+  <script src="./index.js"></script>
+</body>
+
+</html>
