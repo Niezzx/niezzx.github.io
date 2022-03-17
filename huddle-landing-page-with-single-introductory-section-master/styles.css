@@ -1,0 +1,139 @@
+/* style guide */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+	--violet: #674bb0;
+	--soft-magenta: hsl(300, 69%, 71%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* outer setting */
+
+body {
+	min-width: 100vw;
+	background: var(--violet);
+	background-image: url(./images/bg-mobile.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.logo {
+	width: 11rem;
+	align-self: flex-start;
+	padding: 3rem;
+}
+
+.image {
+	width: 22rem;
+	padding: 2rem 1rem;
+}
+
+.content {
+	padding: 3rem 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+h1 {
+	padding: 0 2rem;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	font-size: 28px;
+	color: #fff;
+	line-height: 1.5;
+	text-align: center;
+}
+
+p {
+	padding: 0 2rem;
+	font-family: "Open Sans", sans-serif;
+	color: #fff;
+	text-align: center;
+}
+
+button {
+	margin-top: 1rem;
+	padding: 0.7rem 5rem;
+	border-radius: 2rem;
+	border: 0.5px #fff;
+	color: var(--violet);
+}
+
+button:hover {
+	background-color: var(--soft-magenta);
+}
+
+td svg {
+	width: 2rem;
+	padding: 0.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+	.container {
+		display: grid;
+		grid-template-rows: 10rem auto 5rem;
+		grid-template-columns: 3fr 2fr;
+		grid-template-areas:
+			"header ."
+			"image content"
+			". footer";
+		align-items: stretch;
+	}
+
+	.logo {
+		grid-area: header;
+		padding-left: 4rem;
+		width: 14rem;
+	}
+
+	.image {
+		grid-area: image;
+		padding: 1rem 0 0 4rem;
+		width: 80%;
+		height: 100%;
+	}
+
+	.content {
+		grid-area: content;
+		align-items: flex-start;
+		padding: 3rem 0;
+		position: relative;
+		left: -5rem;
+	}
+
+	.content h1 {
+		width: 90%;
+		font-size: 3em;
+		text-align: left;
+		padding: 1rem 0;
+	}
+
+	.content p {
+		text-align: left;
+		font-size: 1.1rem;
+		padding: 3rem 0;
+	}
+
+	button {
+		width: 15rem;
+		height: 4rem;
+		padding: 0;
+		font-size: 1.5rem;
+	}
+
+	table {
+		grid-area: footer;
+	}
+}
