@@ -13,5 +13,11 @@ function getAdvice() {
 	xhr.send();
 }
 
+function message() {
+	console.log("hello world");
+}
+
 const icon = document.querySelector(".icon");
-icon.onclick = getAdvice();
+icon.addEventListener("click", getAdvice);
+
+icon.addEventListener("click", message);
