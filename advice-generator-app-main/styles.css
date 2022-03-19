@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+:root {
+	--light-cyan: hsl(193, 38%, 86%);
+	--neon-green: hsl(150, 100%, 66%);
+	--Grayish-Blue: hsl(217, 19%, 38%);
+	--Dark-Grayish-Blue: hsl(217, 19%, 24%);
+	--Dark-Blue: hsl(218, 23%, 16%);
+}
+
+/* -------------- */
+/* Basic setting */
+
+body {
+	min-width: 100vw;
+	height: 100vh;
+	background: var(--Dark-Blue);
+	justify-content: center;
+	align-items: center;
+}
+
+.flex {
+	display: flex;
+	flex-direction: column;
+}
+
+/* ----------- */
+/* container */
+
+.container {
+	width: 400px;
+	background: var(--Dark-Grayish-Blue);
+	border-radius: 10px;
+	align-items: center;
+}
+
+h5 {
+	text-transform: uppercase;
+	color: var(--neon-green);
+	text-align: center;
+	margin: 40px;
+}
+
+p {
+	display: block;
+	font-size: 26px;
+	line-height: 1.5;
+	font-family: "Manrope", sans-serif;
+	margin-top: 40px;
+}
+
+.icon {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background: url(./images/icon-dice.svg) var(--neon-green) center no-repeat;
+	margin-top: 40px;
+	position: relative;
+	top: 30px;
+}
+
+.icon:hover {
+	box-shadow: 0 0 30px var(--neon-green);
+}
+
+/* ------------ */
+/* destop view */
+
+@media screen and (min-width: 768px) {
+	.container {
+		width: 50%;
+	}
+
+	.divider {
+		content: url(./images/pattern-divider-desktop.svg);
+	}
+}
