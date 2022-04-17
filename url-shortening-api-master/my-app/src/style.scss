@@ -34,6 +34,11 @@ $Very-Dark-Violet: hsl(260, 8%, 14%);
 	font-family: "Poppins", sans-serif;
 }
 
+body{
+	min-width:1080px;
+}
+
+
 .header {
 	display: flex;
 	justify-content: space-between;
