@@ -1,11 +1,15 @@
 import React, { useState } from "react";
+
 import List from "./List";
+import Card from "./Card";
 
 export default function ShortenLink() {
 	let initStyle = true;
+
 	const [linkData, setLinkDate] = useState({ inputContent: "" });
 	const [responseData, setResponseData] = useState({
 		ok: true,
+		result: "",
 	});
 
 	function handleChange(e) {
@@ -18,8 +22,7 @@ export default function ShortenLink() {
 		fetch(url)
 			.then((response) => response.json())
 			.then((data) => {
-				if (data.ok && data.result["original_link"] !== "undefined")
-					setResponseData(data);
+				if (data.ok) setResponseData(data.result);
 			})
 			.catch(() => {
 				return { ok: false };
@@ -44,6 +47,14 @@ export default function ShortenLink() {
 			<ul className="shortenUl">
 				<List response={responseData} />
 			</ul>
+			<div className="advancedStatistics">
+				<h1>Advanced Statistics</h1>
+				<p>
+					Track hwo your links are performing across the web with our advanced
+					statistics dashboard.
+				</p>
+				<Card />
+			</div>
 		</div>
 	);
 }

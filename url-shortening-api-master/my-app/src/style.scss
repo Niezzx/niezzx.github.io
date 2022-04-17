@@ -88,7 +88,7 @@ $Very-Dark-Violet: hsl(260, 8%, 14%);
 }
 .shortenLink {
 	height: 900px;
-	background-color: $Grayish-Violet;
+	background-color: #f0f1f6;
 	margin-top: 100px;
 	display: flex;
 	flex-direction: column;
@@ -97,11 +97,10 @@ $Very-Dark-Violet: hsl(260, 8%, 14%);
 		width: 70%;
 		height: 150px;
 		border-radius: 10px;
-		background: $Dark-Violet url(../src/images/bg-shorten-desktop.svg);
+		background: #3a3053 url(../src/images/bg-shorten-desktop.svg);
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: top;
-		mix-blend-mode: hard-light;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -137,9 +136,8 @@ $Very-Dark-Violet: hsl(260, 8%, 14%);
 	.shortenUl {
 		display: flex;
 		width: 70%;
-		height: 200px;
-		border: 1px red solid;
 		list-style: none;
+		justify-content: center;
 		li {
 			width: 100%;
 			height: 60px;
@@ -148,6 +146,7 @@ $Very-Dark-Violet: hsl(260, 8%, 14%);
 			display: flex;
 			align-items: baseline;
 			padding-top: 15px;
+			margin-bottom: 20px;
 			p {
 				margin-left: 70px;
 			}
@@ -167,6 +166,119 @@ $Very-Dark-Violet: hsl(260, 8%, 14%);
 			.copyed {
 				background-color: $Dark-Violet;
 			}
+		}
+	}
+	.advancedStatistics {
+		margin-top: 40px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		h1 {
+			color: #000;
+			font-size: 2rem;
+		}
+		p {
+			text-align: center;
+			width: 600px;
+			padding-top: 30px;
+			color: $Grayish-Violet;
+		}
+		.cardList {
+			display: flex;
+			margin-top: 20px;
+			.card {
+				min-width: 350px;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				background-color: #fff;
+				margin: 20px 20px;
+				padding: 20px 30px;
+				img {
+					background: #353351;
+					padding: 20px;
+					border-radius: 50%;
+					background-blend-mode: hard-light;
+					position: relative;
+					top: -45px;
+				}
+				h3 {
+					font-size: 1.5rem;
+					padding-bottom: 20px;
+				}
+				span {
+					color: $Grayish-Violet;
+				}
+				&:nth-child(2) {
+					position: relative;
+					bottom: -100px;
+				}
+				&:nth-child(3) {
+					position: relative;
+					bottom: -200px;
+				}
+			}
+		}
+	}
+}
+.footer {
+	max-width: 90%;
+	margin-left: 4%;
+	border: 1px red solid;
+	margin-top: 50px;
+	.boost {
+		display: flex;
+		flex-direction: column;
+		height: 200px;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		background: #3a3053 url(./images/bg-boost-desktop.svg) no-repeat;
+		color: #fff;
+		div {
+			font-size: 30px;
+		}
+		button {
+			@extend .button--Cyan--style;
+			width: 200px;
+			margin-top: 35px;
+		}
+	}
+	.bottom {
+		height: 250px;
+		background-color: $Very-Dark-Violet;
+		display: flex;
+		padding-top: 50px;
+		padding-left: 100px;
+		.icon {
+			font-size: 25px;
+			color: #fff;
+			font-weight: 700;
+			margin-right: 100px;
+		}
+		.links {
+			margin-left: 100px;
+			display: flex;
+			column-gap: 80px;
+			p {
+				font-size: 15px;
+				padding-top: 5px;
+				color: $Grayish-Violet;
+				&:hover {
+					color: $Cyan;
+				}
+				&:first-child {
+					font-size: 20px;
+					color: #fff;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+	.social {
+		margin-left: 100px;
+		img {
+			margin-left: 20px;
 		}
 	}
 }
